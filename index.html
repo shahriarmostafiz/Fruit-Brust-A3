@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- daisyUI cdn  -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
@@ -29,88 +37,97 @@
       };
     </script>
 
-    <title>Document</title>
+    <title>Fruits</title>
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-lato">
     <header class="container mx-auto lg:px-10">
       <!-- nav bar section  -->
-      <nav class="lg:my-12">
-        <div
-          class="navbar lg:bg-primary-color lg:text-white lg:px-16 lg:rounded-full"
-        >
-          <div class="navbar-start hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 text-lg font-medium">
-              <li><a>Home</a></li>
-              <li><a>About Us</a></li>
-              <li><a>Shop</a></li>
-              <li><a>All Fruits</a></li>
-            </ul>
-          </div>
+      <div class="hidden lg:flex">
+        <nav class="lg:my-12 flex-1">
           <div
-            class="navbar-center lg:max-w-[300px] lg:mx-auto justify-between lg:justify-start"
+            class="navbar lg:bg-primary-color lg:text-white px-10 lg:rounded-full"
           >
-            <div class="dropdown">
-              <label tabindex="0" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </label>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg font-medium"
-              >
+            <div class="navbar-start hidden lg:flex">
+              <ul class="menu menu-horizontal text-lg font-medium">
                 <li><a>Home</a></li>
                 <li><a>About Us</a></li>
                 <li><a>Shop</a></li>
                 <li><a>All Fruits</a></li>
               </ul>
             </div>
-            <div class="flex items-center gap-4">
-              <img src="./images/logo.png" alt="" />
-              <span class="text-4xl font-medium">Fruit Brust</span>
+            <div class="navbar-center justify-between lg:justify-start">
+              <div class="dropdown"></div>
+              <div class="flex items-center gap-4">
+                <img src="./images/logo.png" alt="" />
+                <span class="text-4xl font-bold">Fruit Brust</span>
+              </div>
             </div>
-          </div>
-          <div class="navbar-end hidden lg:flex">
-            <div class="relative">
-              <input
-                type="text"
-                class="border hover:text-black rounded-full lg:py-2 lg:px-4 lg:pr-10 focus:outline-none focus:ring focus:border-blue-300"
-                placeholder="Search..."
-              />
-              <div class="absolute lg:top-2 lg:right-2 text-gray-400">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z"
-                    stroke="#121212"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+            <div class="navbar-end hidden lg:flex">
+              <div class="relative">
+                <input
+                  type="text"
+                  class="hover:text-gray-700 rounded-full lg:py-2 lg:px-4 lg:pr-10"
+                  placeholder="Search..."
+                />
+                <div class="absolute lg:top-2 lg:right-2 text-gray-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z"
+                      stroke="#121212"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
+        </nav>
+      </div>
+      <!-- smaller nav bar  -->
+      <div class="lg:hidden py-5">
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <div class="flex items-center gap-4">
+              <img src="./images/logo.png" alt="" />
+              <span class="text-4xl font-bold">Fruit Brust</span>
+            </div>
+          </div>
+          <div class="flex-none">
+            <button class="btn btn-square btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25"
+                  stroke="#121212"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-      </nav>
+      </div>
       <!-- banner section    -->
-      <section class="px-4 my-4 relative">
+      <section class="px-4 lg:px-0 my-4 relative">
         <div class="carousel w-full rounded-lg">
           <!-- slide one  -->
           <div id="slide1" class="carousel-item relative w-full">
@@ -247,5 +264,92 @@
         </div>
       </section>
     </header>
+    <main class="container mx-auto lg:px-10 lg:my-32">
+      <!-- deal section  -->
+      <section>
+        <!-- heading section  -->
+        <div class="flex flex-col lg:flex-row items-center lg:gap-48 gap-10">
+          <div class="flex-1 lg:px-20 text-center lg:text-left">
+            <h1 class="text-5xl">Deal of the day</h1>
+            <p class="text-gray-500">
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+
+          <div
+            class="flex-1 grid grid-flow-col lg:gap-9 gap-4 text-center auto-cols-max"
+          >
+            <div class="flex flex-col">
+              <span class="countdown font-extrabold text-5xl">
+                <span style="--value: 24">:</span>
+              </span>
+              days
+            </div>
+            <div class="flex flex-col">
+              <span class="text-5xl">:</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-extrabold text-5xl">
+                <span style="--value: 10"></span>
+              </span>
+              hours
+            </div>
+            <div class="flex flex-col">
+              <span class="text-5xl">:</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-extrabold text-5xl">
+                <span style="--value: 24"></span>
+              </span>
+              min
+            </div>
+            <div class="flex flex-col">
+              <span class="text-5xl">:</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-extrabold text-5xl">
+                <span style="--value: 39"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+        <!-- cards section  -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- box-1  -->
+          <div class="flex flex-col items-center justify-center">
+            <img src="./images/fruit6.png" alt="" />
+            <h2>$12.99-$18.50</h2>
+            <hr />
+            <p>Apples</p>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_1.showModal()">
+              open modal
+            </button>
+            <dialog id="my_modal_1" class="modal">
+              <form method="dialog" class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div class="flex items-center">
+                  <div>
+                    <button class="btn bg-primary-color text-white">
+                      Buy Now
+                    </button>
+                  </div>
+                  <div class="modal-action mb-5">
+                    <!-- if there is a button, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </div>
+                </div>
+              </form>
+            </dialog>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
